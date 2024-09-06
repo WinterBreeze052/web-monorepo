@@ -1,1 +1,8 @@
-2
+packages:
+  # 主项目
+  - "main-project"
+  # 子目录下所有项目
+  - "packages/*"
+catalog:
+  vite: "^5.3.4"
+  typescript: "^5.2.2"
