@@ -1,5 +1,5 @@
-declare interface Aobj{
-  name:string
-  age:number
-  gender:"L"|"G"|"B"|"T"
+declare interface Aobj {
+  name: string
+  age: number
+  gender: 'L' | 'G' | 'B' | 'T'
 }

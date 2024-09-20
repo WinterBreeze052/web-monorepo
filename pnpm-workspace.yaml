@@ -1,8 +1,8 @@
 packages:
   # 主项目
-  - "main-project"
+  - main-project
   # 子目录下所有项目
-  - "packages/*"
+  - 'packages/*'
 catalog:
-  vite: "^5.3.4"
-  typescript: "^5.2.2"
+  vite: ^5.3.4
+  typescript: ^5.2.2

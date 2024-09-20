@@ -1,23 +1,23 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
-import { ZhiHuHot, ZhiHuHotList } from "../types/zhihu";
+import type { ZhiHuHot, ZhiHuHotList } from '../types/zhihu'
+import { onMounted, ref } from 'vue'
 
-const list = ref<ZhiHuHot[]>([]);
+const list = ref<ZhiHuHot[]>([])
 
 const getData = async () => {
-  const url = "/api/v3/feed/topstory/hot-lists/total";
-  let response = await fetch(url, { mode: "no-cors" });
-  const res: ZhiHuHotList = await response.json();
-  list.value = res.data;
-};
+  const url = '/api/v3/feed/topstory/hot-lists/total'
+  const response = await fetch(url, { mode: 'no-cors' })
+  const res: ZhiHuHotList = await response.json()
+  list.value = res.data
+}
 
 onMounted(() => {
-  getData();
-});
+  getData()
+})
 
 const toggleHot = (id: number) => {
-  // window.open(`https://www.zhihu.com/question/${id}`);
-};
+  window.open(`https://www.zhihu.com/question/${id}`)
+}
 </script>
 
 <template>

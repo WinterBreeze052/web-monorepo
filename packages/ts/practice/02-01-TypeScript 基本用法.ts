@@ -1,4 +1,4 @@
-let age: number = 18
+const age: number = 18
 // console.log(age)
 
 function toPrint(num: number): string {

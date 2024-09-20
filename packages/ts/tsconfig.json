@@ -1,16 +1,16 @@
 {
   "compilerOptions": {
-    "target": "es2016", // 指定编译产物的 JS 版本
-    "module": "ESNext", // 指定生成什么模块代码
-    "forceConsistentCasingInFileNames": true, // 确保导入时的大小写正确
-    "strict": true, // 启用所有严格类型检查选项。
-    "skipLibCheck": true, // 跳过库检查
-    "outDir": "dist", // 指定编译产物存放的目录
-    "allowJs": true, // 指定源目录的 JavaScript 文件是否原样拷贝到编译后的目录
-    "baseUrl": "./",
+    "target": "es2016", // 指定源目录的 JavaScript 文件是否原样拷贝到编译后的目录
+    "baseUrl": "./", // 指定编译产物的 JS 版本
+    "module": "ESNext",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    }, // 指定编译产物存放的目录
+    "allowJs": true, // 确保导入时的大小写正确
+    "strict": true, // 跳过库检查
+    "outDir": "dist", // 指定生成什么模块代码
+    "forceConsistentCasingInFileNames": true, // 启用所有严格类型检查选项。
+    "skipLibCheck": true
     // "isolatedModules": true, // 将每个文件作为单独的模块
     // "noEmit": true, // 不生成输出文件
     // "declaration": true, // 生成相应的 '.d.ts' 文件

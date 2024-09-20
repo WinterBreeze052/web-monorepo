@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import Test from './components/Test.vue'
-import ZhihuHot from './components/ZhihuHot.vue'
+import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
@@ -12,10 +11,7 @@ import ZhihuHot from './components/ZhihuHot.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo">
     </a>
   </div>
-  <h2>软件2341-49-韩洪宇</h2>
-  <!-- <HelloWorld msg="Vite + Vue" /> -->
-  <Test />
-  <ZhihuHot />
+  <HelloWorld msg="Vite + Vue" />
 </template>
 
 <style scoped>
