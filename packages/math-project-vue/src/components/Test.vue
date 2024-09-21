@@ -20,14 +20,13 @@ onMounted(() => {
     <!-- <div class="i-carbon-bot" /> -->
     <div class="i-openmoji-blossom" />
   </div>
-  <div>>>>>><<KSDJ(UFU)(A)</div>
   <div class="dark:bg-red">
     <div class="flex justify-center gap-5">
       <button @click="disableDarkMode">
-        Light
+        开灯
       </button>
       <button @click="enableDarkMode">
-        Dark
+        关灯
       </button>
     </div>
   </div>

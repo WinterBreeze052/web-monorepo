@@ -21,6 +21,32 @@ const toggleHot = (id: number) => {
 </script>
 
 <template>
+  <div class="flex flex-col gap-4">
+    <section v-for="(item, index) in list" :key="item.id" class="h-52 flex cursor-pointer justify-between border border-gray-300 rounded bg-[#d3f3fa] p-4 transition-colors duration-300 hover:bg-[#63e5ff]" @click="toggleHot(item.target.id)">
+      <span class="mr-4 text-2xl font-bold line-height-5">{{ index + 1 }}</span>
+      <div class="h-full flex flex-1 flex-col justify-around">
+        <h2 class="line-clamp-1 overflow-hidden text-ellipsis text-lg font-semibold">
+          {{ item.target.title }}
+        </h2>
+        <p class="line-clamp-3 overflow-hidden text-ellipsis text-sm text-gray-600">
+          {{ item.target.excerpt }}
+        </p>
+        <div class="text-start text-xs text-gray-800">
+          {{ item.detail_text }}
+        </div>
+      </div>
+      <img :src="item.children[0].thumbnail" alt="" class="h-[100px] w-[100px] rounded object-cover">
+    </section>
+  </div>
+</template>
+
+<style scoped>
+.line-height-5 {
+  line-height: 20px;
+}
+</style>
+
+<!-- <template>
   <div class="list">
     <section v-for="(item, index) in list" :key="item.id" class="hot" @click="toggleHot(item.target.id)">
       <span class="list-span">{{ index + 1 }}</span>
@@ -132,3 +158,4 @@ const toggleHot = (id: number) => {
   width: 300px;
 }
 </style>
+ -->
