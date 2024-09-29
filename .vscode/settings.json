@@ -1,4 +1,8 @@
 {
+  "i18n-ally.localesPaths": ["packages/math-project-vue/locales"],
+  "i18n-ally.sourceLanguage": "en",
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.sortKeys": true,
   // 配置语言的文件关联
   "files.associations": {
     "*.nvue": "vue",
@@ -32,9 +36,7 @@
   // 重新设定tabsize
   "editor.tabSize": 2,
   // 对应长度处显示一条线
-  "editor.rulers": [
-    100
-  ],
+  "editor.rulers": [100],
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
   // 在使用搜索功能时，将这些文件夹/文件排除在外
@@ -45,7 +47,6 @@
     "**/logs": true
   },
   "unocss.autocomplete.matchType": "fuzzy",
-
   // Disable the default formatter, use eslint instead
   "prettier.enable": false,
   "editor.formatOnSave": false,

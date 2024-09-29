@@ -7,9 +7,11 @@ const count = ref(0)
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
+  <h1>我的主页</h1>
+  <h3>软件2341-49-韩洪宇</h3>
+  <!-- <h1>{{ msg }}</h1>
 
-  <div class="card">
+   <div class="card">
     <button type="button" @click="count++">
       count is {{ count }}
     </button>
@@ -35,7 +37,7 @@ const count = ref(0)
   </p>
   <p class="read-the-docs">
     Click on the Vite and Vue logos to learn more
-  </p>
+  </p> -->
 </template>
 
 <style scoped>

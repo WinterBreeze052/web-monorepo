@@ -33,7 +33,6 @@ export function useDark() {
   }
 
   return {
-
     enableDarkMode,
     disableDarkMode,
     applySavedTheme,

@@ -1,36 +1,52 @@
 <script setup lang="ts">
-import Test from './components/Test.vue'
-import ZhihuHot from './components/ZhihuHot.vue'
+// import ZhihuHot from './components/ZhihuHot.vue'
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo">
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo">
-    </a>
+  <h1>Hello Vue!</h1>
+  <p>软件2341-49-韩洪宇</p>
+  <p>
+    <strong>Current route path:</strong> {{ $route.fullPath }}
+  </p>
+  <div class="nav">
+    <RouterLink to="/" class="nav-link">
+      主页
+    </RouterLink>
+    <RouterLink to="/zhihuhot" class="nav-link">
+      知乎热榜
+    </RouterLink>
+    <RouterLink to="/dingzhen" class="nav-link">
+      以赝顶真
+    </RouterLink>
+    <RouterLink to="/apifox" class="nav-link">
+      Apifox-Pet
+    </RouterLink>
+    <RouterLink to="/i18n" class="nav-link">
+      I18n
+    </RouterLink>
   </div>
-  <h2>软件2341-49-韩洪宇</h2>
-  <!-- <HelloWorld msg="Vite + Vue" /> -->
-  <Test />
-  <ZhihuHot />
+  <main>
+    <RouterView />
+  </main>
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.nav {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  gap: 1rem; /* 按钮之间的间距 */
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.nav-link {
+  padding: 10px 15px; /* 内边距 */
+  background-color: #007bff; /* 背景颜色 */
+  color: white; /* 字体颜色 */
+  text-decoration: none; /* 去掉下划线 */
+  border-radius: 5px; /* 圆角 */
+  transition: background-color 0.3s; /* 背景颜色变化动画 */
 }
 
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+.nav-link:hover {
+  background-color: #0056b3; /* 悬停时的背景颜色 */
 }
 </style>
