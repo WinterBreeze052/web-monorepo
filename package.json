@@ -27,7 +27,8 @@
     "eslint-plugin-format": "^0.1.2",
     "lint-staged": "^15.2.10",
     "simple-git-hooks": "^2.11.1",
-    "unocss": "^0.62.4"
+    "unocss": "^0.62.4",
+    "unocss-preset-theme": "^0.13.0"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"

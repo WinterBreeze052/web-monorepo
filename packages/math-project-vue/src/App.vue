@@ -24,6 +24,15 @@
     <RouterLink to="/i18n" class="nav-link">
       I18n
     </RouterLink>
+    <RouterLink to="/thecountern" class="nav-link">
+      计数器
+    </RouterLink>
+    <RouterLink to="/unocssthemeswitcher" class="nav-link">
+      Unocss主题
+    </RouterLink>
+    <RouterLink to="/messagebox" class="nav-link">
+      MessageBox
+    </RouterLink>
   </div>
   <main>
     <RouterView />

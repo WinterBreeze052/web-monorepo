@@ -1,3 +1,4 @@
+/// <reference types="vitest/config" />
 import path from 'node:path'
 import VueI18n from '@intlify/unplugin-vue-i18n/vite'
 import vue from '@vitejs/plugin-vue'
@@ -29,5 +30,9 @@ export default defineConfig({
         // rewrite: (path) => path.replace(/^\/api/, ''),
       },
     },
+  },
+  test: {
+    environment: 'jsdom',
+    // 其他测试配置可以在这里添加
   },
 })

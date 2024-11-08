@@ -7,6 +7,9 @@ import {
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
+import presetTheme from "unocss-preset-theme";
+import { myTheme } from "./uno.theme";
+import type { Theme } from "unocss/preset-uno";
 
 export default defineConfig({
   // ...UnoCSS options
@@ -18,6 +21,9 @@ export default defineConfig({
     presetIcons({
       scale: 1.2,
       warn: true,
+    }),
+    presetTheme<Theme>({
+      theme: myTheme,
     }),
   ],
   transformers: [

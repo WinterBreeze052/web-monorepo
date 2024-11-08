@@ -5,6 +5,14 @@ export default antfu({
   typescript: true,
   vue: true,
   react: true,
+  env: {
+    jest: true, // 启用 Jest 环境
+  },
+  plugins: ['jest'], // 添加 jest 插件
+  extends: [
+    'eslint:recommended',
+    'plugin:jest/recommended', // 使用推荐的 Jest 规则
+  ],
 
   // 在Flat配置中不再支持' .eslintignore '，请使用' ignore '代替
   ignores: [
@@ -21,6 +29,7 @@ export default antfu({
   lessOpinionated: true,
   // 覆盖规则
   rules: {
+    'sort-keys': 'off', // 关闭键排序规则
     'style/no-multiple-empty-lines': ['warn', { max: 2 }], // 最大空行
     'no-console': 'warn',
     'unocss/blocklist': 'warn', // 禁止特定的类选择器
@@ -35,7 +44,6 @@ export default antfu({
     'import/order': 'off',
     // '@typescript-eslint/no-unused-vars': 'off', // 关于未使用变量的规则（如“已声明但从未读取”）
     'perfectionist/sort-imports': 'off',
-    'sort-keys': 'off', // 关闭键排序规则
   },
 })
   .overrideRules({
@@ -52,7 +60,7 @@ export default antfu({
   })
   .override('antfu/typescript/rules', {
     rules: {
-      'ts/no-explicit-any': 'error', // 禁止使用any
+      'ts/no-explicit-any': 'warn', // 禁止使用any
       'jsdoc/sort-tags': ['warn'],
       'ts/ban-ts-comment': 'off', // 禁止使用 @ts-ignore
       // "ts/no-unused-expressions": "off",

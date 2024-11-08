@@ -6,3 +6,4 @@ packages:
 catalog:
   vite: ^5.3.4
   typescript: ^5.2.2
+  vue: 3.5.11
